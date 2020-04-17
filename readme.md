@@ -7,7 +7,7 @@ Happy hacking!
 
 
 ## TODO
-- Make the endpoints more robust
-- Restructure, and seperate alarm and device
-- make other great stuff
-- repeat previous item
+1 Make this into a npm package, and remove express
+2 Restructure, and seperate alarm and device
+3 make other great stuff
+4 repeat #3
