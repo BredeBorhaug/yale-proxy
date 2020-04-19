@@ -1,16 +1,16 @@
-const express = require(`express`)
-const app = express()
-const auth = require(`./api/auth/auth`)
-const status = require(`./api/status/status`)
+// include all the different utilities
 
-const PORT = 3010
+// getAccessToken and refreshAccessToken
+const auth = require(`./utilities/auth`)
 
-app.use(express.json())
+// Alarm related endpoints
+const alarm = require(`./utilities/alarm`)
 
-app.use(`/api/auth`, auth.router)
-app.use(`/api/status`, status.router)
+// Device related endpoints
+const device = require(`./utilities/device`)
 
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}.`)
-})
+module.exports = {
+    auth,
+    alarm,
+    device,
+}
